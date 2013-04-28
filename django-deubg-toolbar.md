@@ -31,7 +31,6 @@ if DEBUG:
 ```
 这个时候访问网站，在右边栏就会出现一系列工具，如下图所示：
 ![django debug toolbar](/images/django_debug_toolbar.png)
-Format: ![django debug toolbar](#)
 
 
 
