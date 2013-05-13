@@ -9,6 +9,11 @@
 ```
 mysqldump -uuser -ppassword -hhost database_name table_name > table_name.sql
 ```
+如果提示:
+```
+mysqldump: Got error: 1044: Access denied for user 'user'@'host' to database 'database_name' when doing LOCK TABLES
+```
+则增加参数```--single-transaction```
 
 恢复数据库表:
 ```
