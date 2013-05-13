@@ -36,7 +36,8 @@ if DEBUG:
 -------------------
 django debug toolbar 对于json数据、gzip数据是不会返回toolbar的，但是我们写api的时候，通常都会返回gzip的json数据，因此我们需要做一些改进。
 
-1. 编写一个新的middleware, 下载地址：[debugtoolbar4json.py](https://gist.github.com/yijingping/5567579)
+1) 编写一个新的middleware, 下载地址：[debugtoolbar4json.py](https://gist.github.com/yijingping/5567579)
+
 ```
 # -*- coding: utf-8 -*-                                                         
 from __future__ import unicode_literals                                         
@@ -62,7 +63,7 @@ class DebugToolbar4JsonMiddleware(object):
         return response                                                         
 ```
 
-2. 将该middleware中加入到settings.py中，注意：确保该middleware在```debug_toolbar.middleware.DebugToolbarMiddleware```的后面。
+2) 将该middleware中加入到settings.py中，注意：确保该middleware在 `debug_toolbar.middleware.DebugToolbarMiddleware` 的后面。
 
 现在，正常访问api url的时候，返回json数据。
 
