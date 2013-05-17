@@ -31,6 +31,7 @@ def common_context_processor(request):
 ```
 
 3. 在views.py中, 使用：
+
 ```
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -60,6 +61,7 @@ def my_view(request, ...):
 ```
 
 4. 在my_template_dir/my_template.html中，使用动态版本号:
+
 ```
 <!doctype html>
 <html>
