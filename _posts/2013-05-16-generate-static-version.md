@@ -6,7 +6,7 @@ web页面中，静态文件：图片、css、js等会被浏览器缓存，如果
 
 # 实现方法
 ---------------------
-1. 在my_context_processors.py中, 添加代码: 
+1) 在my_context_processors.py中, 添加代码: 
 
 ```
 from django.conf import settings
@@ -19,7 +19,7 @@ def common_context_processor(request):
 
 ```
 
-2. 在settings.py中添加：
+2) 在settings.py中添加：
 
 ```
  # add for static file                                       
@@ -30,7 +30,7 @@ def common_context_processor(request):
  )                                                           
 ```
 
-3. 在views.py中, 使用：
+3) 在views.py中, 使用：
 
 ```
 from django.shortcuts import render_to_response
@@ -60,7 +60,7 @@ def my_view(request, ...):
     return render_to_response('my_template_dir/my_template.html', response_dict)
 ```
 
-4. 在my_template_dir/my_template.html中，使用动态版本号:
+4) 在my_template_dir/my_template.html中，使用动态版本号:
 
 ```
 <!doctype html>
