@@ -50,34 +50,43 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
 * 安装pypi server 
 
     ```
+	$ cd /PATH/TO/PRIVATEPYPI
     $ virtualenv pypienv    # 建立一个virtaulenv
 
-    $ source PATH/TO/pypienv/bin/activate
+    $ source PATH/TO/PRIVATEPYPI/pypienv/bin/activate
     $ pip install pypiserver   #安装pypi server
 
-    $ mkdir PATH/TO/pypi-packages # 建立存放packages的文件夹
+    $ mkdir PATH/TO/PRIVATEPYPI/packages # 建立存放packages的文件夹
     ```
 
-* 编写脚本/PATH/TO/run-pypi.py，作用是在virtualenv中启动pypiserver。
+* 编写脚本/PATH/TO/PRIVATEPYPI/run-pypi.py，作用是在virtualenv中启动pypiserver。
 
     ```
     #!/bin/sh                      
     # 启动virtualenv                                                                                    
-    . PATH/TO/pypienv/bin/activate                 
+    . /PATH/TO/PRIVATEPYPI/pypienv/bin/activate                 
     # 使用端口号3141，因为pypi与π谐音，π≈3.141
-    exec pypi-server -p 3141 /PATH/TO/pypi-packages  
+    exec pypi-server -p 3141 /PATH/TO/PRIVATEPYPI/packages  
     ```
 
-* 在/etc/supervisor/conf.d增加配置文件pypi-server.conf， 配置如下：
+* 在supervisor中配置启动pypi server 
+	新建文件/PATH/TO/PRIVATEPYPI/pypi-server.conf，内容如下：
 
     ```
     [program:pypi-server]                 
-    directory=/PATH/TO/   
+    directory=/PATH/TO/PRIVATEPYPI/   
     command=sh run-pypi.sh                
     autostart=true                        
     autorestart=true                      
     redirect_stderr=true                  
     ```
+
+	将该文件软链到supervisor的配置文件夹下:
+	
+	```
+	$ cd /etc/supervisor/conf.d/
+	$ sudo ln -s /PATH/TO/PRIVATEPYPI/pypi-supervisor.conf pypi-supervisor.conf
+	```
 
 * 重启supervisor
 
@@ -86,15 +95,47 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
     $ sudo /etc/init.d/supervisor start
     ```
 
-    这时候在浏览器中访问 [http://localhost:3134/](http://localhost:3134/) ，就可以看到pypiserver的欢迎页面了。
+    这时候在浏览器中访问 http://localhost:3134/ ，就可以看到pypiserver的欢迎页面了。
 
 * 上传package
+	上传package需要用户名密码，密码文件使用命令htpasswd生成
 
-    方法1：将/PATH/TO/pypi-packages当成git仓库管理起来，通过git push来管理packages
+	```
+	$ pip install passlib
+	$ apt-get install apache2-utils
+	$ htpasswd -sc /PATH/TO/PRIVATEPYPI/.htaccess user   # 回车后会提示输入密码，输入123
+	```
 
-    方法2：用ftp的方式上传
+	修改run-pypi.sh, 启动pypi server时加载密码文件
 
-    建议使用方法1
+	```
+	#!/bin/sh                                         
+	                                                  
+	. ./pypienv/bin/activate                          
+	exec pypi-server -p 3141 -P ./.htaccess ./packages
+	```
+
+	用前面的方法重新启动supervisor。
+
+	在用户的主目录下新建文件.pypirc(也可以在/PATH/TO/PRIVATEPYPI/下新建，通过软链链接到home目录下，推荐使用)，写入下面的内容：
+
+	```
+	[distutils]
+	index-servers =
+	  privatepypi 
+
+	[privatepypi]
+	repository:http://127.0.0.1:3141
+	username:user
+	password:123 
+	```
+
+	上传package文件：
+
+	```
+	$ python setup.py sdist upload -r privatepypi 
+	```
+	
 
 * 下载package
     
