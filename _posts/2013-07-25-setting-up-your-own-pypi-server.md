@@ -70,6 +70,7 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
     ```
 
 * 在supervisor中配置启动pypi server 
+
 	新建文件/PATH/TO/PRIVATEPYPI/pypi-server.conf，内容如下：
 
     ```
@@ -95,10 +96,11 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
     $ sudo /etc/init.d/supervisor start
     ```
 
-    这时候在浏览器中访问 http://localhost:3134/ ，就可以看到pypiserver的欢迎页面了。
+    这时候在浏览器中访问 http://localhost:3141/ ，就可以看到pypiserver的欢迎页面了。
 
 * 上传package
-	上传package需要用户名密码，密码文件使用命令htpasswd生成
+
+	* 上传package需要用户名密码，密码文件使用命令htpasswd生成
 
 	```
 	$ pip install passlib
@@ -106,7 +108,7 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
 	$ htpasswd -sc /PATH/TO/PRIVATEPYPI/.htaccess user   # 回车后会提示输入密码，输入123
 	```
 
-	修改run-pypi.sh, 启动pypi server时加载密码文件
+	* 修改run-pypi.sh, 启动pypi server时加载密码文件
 
 	```
 	#!/bin/sh                                         
@@ -115,9 +117,9 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
 	exec pypi-server -p 3141 -P ./.htaccess ./packages
 	```
 
-	用前面的方法重新启动supervisor。
+	* 用前面的方法重新启动supervisor。
 
-	在用户的主目录下新建文件.pypirc(也可以在/PATH/TO/PRIVATEPYPI/下新建，通过软链链接到home目录下，推荐使用)，写入下面的内容：
+	* 在用户的主目录下新建文件.pypirc(也可以在/PATH/TO/PRIVATEPYPI/下新建，通过软链链接到home目录下，推荐使用)，写入下面的内容：
 
 	```
 	[distutils]
@@ -130,7 +132,7 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
 	password:123 
 	```
 
-	上传package文件：
+	* 上传package文件：
 
 	```
 	$ python setup.py sdist upload -r privatepypi 
@@ -142,10 +144,3 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
     ```
     $ pip install -i http://localhost:3134/simple/ some-package
     ```
-
-
-
-
-
-
- 
