@@ -86,14 +86,12 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
     $ sudo /etc/init.d/supervisor start
 ```
 
-    这时候在浏览器中访问 [http://localhost:3134/](http://localhost:3134/) ，就可以看到pypiserver的欢迎页面了。
+这时候在浏览器中访问 [http://localhost:3134/](http://localhost:3134/) ，就可以看到pypiserver的欢迎页面了。
 
-* 上传
+* 上传package
 
     方法1：将/PATH/TO/pypi-packages当成git仓库管理起来，通过git push来管理packages
-
     方法2：用ftp的方式上传
-    
     建议使用方法1
 
 * 下载package
