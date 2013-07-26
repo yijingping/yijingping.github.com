@@ -90,9 +90,11 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
 
 * 上传package
 
-    方法1：将/PATH/TO/pypi-packages当成git仓库管理起来，通过git push来管理packages
-    方法2：用ftp的方式上传
-    建议使用方法1
+方法1：将/PATH/TO/pypi-packages当成git仓库管理起来，通过git push来管理packages
+
+方法2：用ftp的方式上传
+
+建议使用方法1
 
 * 下载package
     
