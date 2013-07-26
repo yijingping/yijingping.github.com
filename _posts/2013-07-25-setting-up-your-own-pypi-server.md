@@ -102,41 +102,41 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
 
 	* 上传package需要用户名密码，密码文件使用命令htpasswd生成
 
-	```
-	$ pip install passlib
-	$ apt-get install apache2-utils
-	$ htpasswd -sc /PATH/TO/PRIVATEPYPI/.htaccess user   # 回车后会提示输入密码，输入123
-	```
+	  ```
+	  $ pip install passlib
+	  $ apt-get install apache2-utils
+	  $ htpasswd -sc /PATH/TO/PRIVATEPYPI/.htaccess user   # 回车后会提示输入密码，输入123
+	  ```
 
 	* 修改run-pypi.sh, 启动pypi server时加载密码文件
 
-	```
-	#!/bin/sh                                         
-	                                                  
-	. ./pypienv/bin/activate                          
-	exec pypi-server -p 3141 -P ./.htaccess ./packages
-	```
+	  ```
+      #!/bin/sh                                         
+
+	  . ./pypienv/bin/activate                          
+	  exec pypi-server -p 3141 -P ./.htaccess ./packages
+	  ```
 
 	* 用前面的方法重新启动supervisor。
 
 	* 在用户的主目录下新建文件.pypirc(也可以在/PATH/TO/PRIVATEPYPI/下新建，通过软链链接到home目录下，推荐使用)，写入下面的内容：
 
-	```
-	[distutils]
-	index-servers =
-	  privatepypi 
+	  ```
+	  [distutils]
+	  index-servers =
+	    privatepypi 
 
-	[privatepypi]
-	repository:http://127.0.0.1:3141
-	username:user
-	password:123 
-	```
+	  [privatepypi]
+	  repository:http://127.0.0.1:3141
+	  username:user
+	  password:123 
+	  ```
 
 	* 上传package文件：
 
-	```
-	$ python setup.py sdist upload -r privatepypi 
-	```
+	  ```
+	  $ python setup.py sdist upload -r privatepypi 
+	  ```
 	
 
 * 下载package
