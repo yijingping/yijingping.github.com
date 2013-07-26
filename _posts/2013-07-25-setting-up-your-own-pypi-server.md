@@ -1,10 +1,10 @@
 如何搭建自己的pypi私有源服务器
 ===========================
-通常我们使用pip安装python包，都会默认从https://pypi.python.org/pypi上安装，非常方便。
+通常我们使用pip安装python包，都会默认从 https://pypi.python.org/pypi 上安装，非常方便。
 
 但是有些是公司内部的项目，不方便放到外网上去，这个时候我们就要搭建自己的内网pypi源服务器，安全并且拥有同样的舒适体验。
 
-python官方有个pypi私有源实现的说明： [http://wiki.python.org/moin/PyPiImplementations]，并 且列出了几个比较成熟的实现方案:
+python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyPiImplementations ，并 且列出了几个比较成熟的实现方案:
 
 * [PyPI] (aka [CheeseShop]) - The reference implementation, powering the main index.
 * [ClueReleaseManager]
@@ -28,11 +28,13 @@ python官方有个pypi私有源实现的说明： [http://wiki.python.org/moin/P
 安装和快速上手
 -----------------------
 
+```
     $ pip install pypiserver
     $ mkdir ~/packages
     # copy some source packages or eggs to this directory
     $ pypi-server -p 8080 ~/packages
     $ pip install -i http://localhost:8080/simple/ ...
+```
 
 改进
 ----------------
@@ -40,39 +42,49 @@ python官方有个pypi私有源实现的说明： [http://wiki.python.org/moin/P
 
 * 安装supervisor
 
+```
     $ sudo apt-get install supervisor
     $ ps aux|grep supervisor # 查看后台是否已经运行起来了
+```
 
 * 安装pypi server 
 
+```
     $ virtualenv pypienv    # 建立一个virtaulenv
 
     $ source PATH/TO/pypienv/bin/activate
     $ pip install pypiserver   #安装pypi server
 
     $ mkdir PATH/TO/pypi-packages # 建立存放packages的文件夹
+```
 
 * 编写脚本/PATH/TO/run-pypi.py，作用是在virtualenv中启动pypiserver。
 
+```
     #!/bin/sh                      
     # 启动virtualenv                                                                                    
     . PATH/TO/pypienv/bin/activate                 
     # 使用端口号3141，因为pypi与π谐音，π≈3.141
     exec pypi-server -p 3141 /PATH/TO/pypi-packages  
+```
 
 * 在/etc/supervisor/conf.d增加配置文件pypi-server.conf， 配置如下：
 
+```
     [program:pypi-server]                 
     directory=/PATH/TO/   
     command=sh run-pypi.sh                
     autostart=true                        
     autorestart=true                      
     redirect_stderr=true                  
+```
 
 * 重启supervisor
 
+```
     $ sudo /etc/init.d/supervisor stop
     $ sudo /etc/init.d/supervisor start
+```
 
     这时候在浏览器中访问 [http://localhost:3134/](http://localhost:3134/) ，就可以看到pypiserver的欢迎页面了。
 
@@ -86,7 +98,9 @@ python官方有个pypi私有源实现的说明： [http://wiki.python.org/moin/P
 
 * 下载package
     
+```
     $ pip install -i http://localhost:3134/simple/ some-package
+```
 
 
 
