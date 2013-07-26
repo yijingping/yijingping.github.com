@@ -1,2 +1,3 @@
-markdown: rdiscount
+name: 易先生的世界
+markdown: redcarpet
 pygments: true

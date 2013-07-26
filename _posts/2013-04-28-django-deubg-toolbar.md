@@ -1,8 +1,9 @@
-如何使用django debug toolbar
+使用django debug toolbar
 ====================================
 
 # 安装
 --------------
+
 ```
 pip install django_debug_toolbar 
 ```
@@ -10,7 +11,8 @@ pip install django_debug_toolbar
 # 配置
 -------------
 虽然debug toolbar在非DEBUG状态下是不启用的，但是我还是建议在settings.py显示的注明这一点，如下所示:
-在`settings.py`文件的末尾添加下面几行：
+在 `settings.py` 文件的末尾添加下面几行：
+
 ```
 # add for debug toolbar
 if DEBUG:
@@ -29,7 +31,9 @@ if DEBUG:
         'debug_toolbar.panels.logger.LoggingPanel',
     )
 ```
+
 这个时候访问网站，在右边栏就会出现一系列工具，如下图所示：
+
 ![django debug toolbar](/images/django_debug_toolbar.png)
 
 # 改进
@@ -68,5 +72,6 @@ class DebugToolbar4JsonMiddleware(object):
 现在，正常访问api url的时候，返回json数据。
 
 当在api的url中加上GET参数debug＝true的时候，则返回带有toolbar的数据。如下图所示：
+
 ![django debug toolbar 4 json](/images/django_debug_toolbar_4_json.png)
 
