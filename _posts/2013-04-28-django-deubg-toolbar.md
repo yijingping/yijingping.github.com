@@ -1,14 +1,16 @@
-使用django debug toolbar
-====================================
+---
+layout: post
+title: 使用django debug toolbar
+---
 
-# 安装
+#. 安装
 --------------
 
 ```
 pip install django_debug_toolbar 
 ```
 
-# 配置
+#. 配置
 -------------
 虽然debug toolbar在非DEBUG状态下是不启用的，但是我还是建议在settings.py显示的注明这一点，如下所示:
 在 `settings.py` 文件的末尾添加下面几行：
