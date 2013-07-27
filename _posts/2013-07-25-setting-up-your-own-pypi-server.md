@@ -28,13 +28,13 @@ python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyP
 安装和快速上手
 -----------------------
 
-    ```
-    $ pip install pypiserver
-    $ mkdir ~/packages
-    # copy some source packages or eggs to this directory
-    $ pypi-server -p 8080 ~/packages
-    $ pip install -i http://localhost:8080/simple/ ...
-    ```
+```
+$ pip install pypiserver
+$ mkdir ~/packages
+# copy some source packages or eggs to this directory
+$ pypi-server -p 8080 ~/packages
+$ pip install -i http://localhost:8080/simple/ ...
+```
 
 改进
 ----------------
