@@ -2,9 +2,9 @@
 ===========================
 通常我们使用pip安装python包，都会默认从 https://pypi.python.org/pypi 上安装，非常方便。
 
-但是有些是公司内部的项目，不方便放到外网上去，这个时候我们就要搭建自己的内网pypi源服务器，安全并且拥有同样的舒适体验。
+但是有些是公司内部的项目，不方便放到外网上去，这个时候我们就要搭建自己的内网pypi源服务器，需要安全并且拥有同样的舒适体验。
 
-python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyPiImplementations ，并 且列出了几个比较成熟的实现方案:
+python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyPiImplementations ，并且列出了几个比较成熟的实现方案:
 
 * [PyPI] (aka [CheeseShop]) - The reference implementation, powering the main index.
 * [ClueReleaseManager]

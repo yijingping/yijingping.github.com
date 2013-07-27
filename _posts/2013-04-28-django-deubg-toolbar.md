@@ -34,7 +34,7 @@ if DEBUG:
 
 这个时候访问网站，在右边栏就会出现一系列工具，如下图所示：
 
-![django debug toolbar](/images/django_debug_toolbar.png)
+![django debug toolbar](/assets/images/django_debug_toolbar.png)
 
 # 改进
 -------------------
@@ -73,5 +73,4 @@ class DebugToolbar4JsonMiddleware(object):
 
 当在api的url中加上GET参数debug＝true的时候，则返回带有toolbar的数据。如下图所示：
 
-![django debug toolbar 4 json](/images/django_debug_toolbar_4_json.png)
-
+![django debug toolbar 4 json](/assets/images/django_debug_toolbar_4_json.png)
