@@ -9,7 +9,7 @@ title: 如何搭建自己的pypi私有源服务器
 
 python官方有个pypi私有源实现的说明：http://wiki.python.org/moin/PyPiImplementations ，并且列出了几个比较成熟的实现方案:
 
-* [PyPI] (aka [CheeseShop]) - The reference implementation, powering the main index.
+* [PyPI] , aka [CheeseShop] - The reference implementation, powering the main index.
 * [ClueReleaseManager]
 * [EggBasket] - A simple, lightweight Python Package Index (aka Cheeseshop) clone.
 * [haufe.eggserver] - Grok-based local repository with upload and no security model.
