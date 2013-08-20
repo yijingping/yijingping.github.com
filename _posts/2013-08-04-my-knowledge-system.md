@@ -29,7 +29,8 @@ C语言和算法
 ================
 * 基础 
 
-  __w3school__: HTML、CSS、JAVASCRIPT、JSON
+  __w3fools__
+  w3school: HTML、CSS、JAVASCRIPT、JSON
 
 * 技术
 
@@ -103,11 +104,22 @@ WEB后端(python系)
 
 	《REST in Pratice》
 
+
 * 工具 
 
 	__Chrome DevTools__
 
 	pagespeed
+
+文档
+===============
+* 技术文档
+
+	Jekyll + Markdown
+
+* 开发文档
+
+	Sphinx + reStructuredText + Nginx
 
 
 数据抓取
@@ -152,3 +164,9 @@ WEB后端(python系)
 * vim
 * dropbox
 * tmux
+* Chrome
+
+我的读书列表
+================
+
+ 豆瓣: <http://book.douban.com/people/yijingping/>
