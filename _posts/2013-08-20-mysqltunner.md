@@ -180,7 +180,7 @@ title: 借助MySQLTuner优化MySQL
 
     碰到这个问题的时候，首先应该排查代码的问题，如果可以优化查询，先优化查询。其次，才是将 `max_heap_table_size`、`tmp_table_size`的值设大一点(多大合适呢,我也不知道，估计应该去tmpdir下看临时表的大小或者逐渐增大，直到比例恢复到正常)
 
-    想了解那些SQL语句会生成临时表，参考mysql官网说明：
+    想了解哪些SQL语句会生成临时表，参考mysql官网说明：
 
     + [How MySQL Uses Internal Temporary Tables](http://dev.mysql.com/doc/refman/5.1/en/internal-temporary-tables.html)
 
