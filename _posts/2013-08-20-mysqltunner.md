@@ -142,6 +142,14 @@ title: 借助MySQLTuner优化MySQL
 
     __结论：__ Query cache 太大，但命中率低，效果不好，反而影响性能，应该减小一半(128M)。
 
+    先在MySQL命令行中更改： 
+
+        mysql> set global query_cache_size=134217728;
+
+    再在my.cnf中更改，防止数据库重启配置丢失：
+
+        query_cache_size = 128M
+
     上面的计算公式参考了下面两篇文章：
 
 	+ [MySQL Query Cache 小结](http://isky000.com/database/mysql-query-cache-summary)
@@ -178,7 +186,12 @@ title: 借助MySQLTuner优化MySQL
 
     说明 `max_heap_table_size = 16M` 太小了,大部分临时表都创建到硬盘而非内存中了。
 
-    碰到这个问题的时候，首先应该排查代码的问题，如果可以优化查询，先优化查询。其次，才是将 `max_heap_table_size`、`tmp_table_size`的值设大一点(多大合适呢,我也不知道，估计应该去tmpdir下看临时表的大小或者逐渐增大，直到比例恢复到正常)
+    碰到这个问题的时候，首先应该排查代码的问题，如果可以优化查询，先优化查询。其次，才是将 `max_heap_table_size`、`tmp_table_size`的值设大一点(多大合适呢，应该去tmpdir下看临时表的大小或者逐渐增大，直到比例恢复到正常)。我设置成了256M。
+    
+    先在mysql命令行中更改，然后查看数据库性能状态变化，改到一个合适的值后，再写入到my.cnf文件，防止数据库重启丢失配置。
+
+        mysql> set @@max_heap_table_size=268435456;
+        mysql> set @@tmp_table_size=268435456;
 
     想了解哪些SQL语句会生成临时表，参考mysql官网说明：
 
