@@ -55,7 +55,7 @@ WEB后端(python系)
 
 	django documention
 
-	django best practice
+	django best practice / tow scoops of django
 
 	django book
 
@@ -65,7 +65,7 @@ WEB后端(python系)
 	
 	高性能mysql
 
-	redis
+	redis 文档: <http://www.redisdoc.com/>  《redis设计与实现》 
 
 	memcached
 
@@ -141,6 +141,9 @@ WEB后端(python系)
 * 书本
 
   __《构建高可用Linux服务器》__
+
+*  命令
+    top/grep/netstat/lsof/ps/tcpdump/vmstat/iostat/strace
 
 * 工具
 
