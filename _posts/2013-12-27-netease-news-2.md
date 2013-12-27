@@ -3,7 +3,7 @@ layout: post
 title: 抓包分析网易新闻app (下)
 ---
 
-上篇分析了`网易新闻`app的基本结果, 下篇主要分析每个HTTP请求, 并找出其中采用的优化措施
+上篇分析了`网易新闻`app的基本结构, 下篇主要分析每个HTTP请求, 并找出其中采用的优化措施
 
 # 1 列表页分析 
 --------------
@@ -71,7 +71,7 @@ Expires是HTTP1.0就有的, Cache-Control从HTTP1.1才有, 如果客户端是HTT
 
 本地缓存4分钟,或者在14:28:31秒过期后,客户端访问服务器,并且加上If-Modified-Since(值等于Last-Modified), 如果没有更改,服务端可以返回304 Not Modified
 
-4) 这是cdn还是squid/varnish
+4) 这是squid/varnish吗?
 
     via: c-3g-163-com-52.75
     X_cache: HIT from zeta-c3g1.sa.bgp.hz

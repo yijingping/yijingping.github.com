@@ -3,7 +3,7 @@ layout: post
 title: 抓包分析网易新闻app (上)
 ---
 
-通过wireshark抓包来分析`网易新闻`这个app
+通过wireshark抓包来分析`网易新闻`这个app的部分结构
 
 # 1 准备 
 --------------
@@ -25,7 +25,7 @@ title: 抓包分析网易新闻app (上)
 
 再查看一些其他请求, 发现还有一些其他域名和ip
 
-如c.m.163.com和img4.cache.netease.com, 123.58.189.25
+如c.m.163.com,img4.cache.netease.com,s.cimg.163.com,123.58.189.25
 
 整理后,发现主要的请求来自c.m.163.com和c.3g.163.com, 这两个域名都映射到123.58.189.25 123.58.189.26两个ip, 部分图片的请求来自img4.cache.netease.com, 可以忽略
 
