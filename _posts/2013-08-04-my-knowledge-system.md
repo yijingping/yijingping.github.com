@@ -63,9 +63,11 @@ WEB后端(python系)
 
 * 数据存储
 	
-	高性能mysql
+	高性能mysql xtrabackup
 
 	redis 文档: <http://www.redisdoc.com/>  《redis设计与实现》 
+
+    MongoDB
 
 	memcached
 
@@ -79,12 +81,26 @@ WEB后端(python系)
 
     nginx + uwsgi + django
 
+    apache
+
+    日志分析工具: goaccess
+
+
+* 搜索:
+
+	solr 
+
+    elasticsearch
+
+* 大数据
+
+    hadoop
+
+    storm
+
 * 配套服务 
 
-
 	代码异常捕获：sentry
-
-	全文检索服务：solr and elasticsearch
 
 	图片系统
 
@@ -96,7 +112,7 @@ WEB后端(python系)
 
 * 书籍
 
-	__《HTTP权威指南》__
+	__《HTTP权威指南》__  
 
 	《白帽子讲WEB安全》
 
@@ -111,6 +127,9 @@ WEB后端(python系)
 
 	pagespeed
 
+    WireShark
+
+
 文档
 ===============
 * 技术文档
@@ -120,6 +139,13 @@ WEB后端(python系)
 * 开发文档
 
 	Sphinx + reStructuredText + Nginx
+
+
+工作方法
+===============
+Get Things Done
+
+Mindmap
 
 
 数据抓取
