@@ -3,33 +3,78 @@ layout: post
 title: 知识体系整理
 ---
 
-C语言和算法
+操作系统和网络
+====================
+
+* 要求熟练使用Debian和CentOS
+
+    《Unix高级环境编程》
+
+    《Unix网络编程卷1，套接字》和《Unix网络编程卷2，进程间通信》
+
+    《Unix编程艺术》
+
+* 网络
+
+    《TCP/IP详解 卷1：协议》
+
+数据结构和算法
 =====================
-* 语言
+
+《算法:C语言实现(第1～4部分)基础知识、数据结构、排序及搜索(原书第3版)》
+
+《算法导论》
+
+
+语言
+=====================
+
+熟练掌握：
+-----------
+
+* Python
+
+    [python官方文档](http://python.org/)
+
+   《python 参考手册》
+
+	virtualenv + virtualenvwraper
+
+    supervisor/fabric/sentry
+
+    ipython
+
+* Java
+
+    《Thinking In Java》
+
+    《JAVA 核心技术卷1: 基础知识》
+
+    《JAVA 核心技术卷2: 高级特性》
+
+2014年尝试：
+-----------
+
+* Go
+    
+  《Go Web 编程》
+
+* Node.js
+
+继续加强:
+-----------
+
+* C语言
 
   《C程序设计语言（第2版·新版）》
 
-* 算法和数据结构
-
-  《算法:C语言实现(第1～4部分)基础知识、数据结构、排序及搜索(原书第3版)》
-
-  《算法导论》
-
-* 系统编程
-
-  __windows__：《Windows 程序设计 》和《Windows核心编程》
-
-  __linux__: 《Unix高级环境编程》、《Unix网络编程卷1，套接字》和《Unix网络编程卷2，进程间通信》
-
-* 系统设计
-
-  《Unix编程艺术》
 
 前端
 ================
 * 基础 
 
   __w3fools__
+
   w3school: HTML、CSS、JAVASCRIPT、JSON
 
 * 技术
@@ -39,41 +84,12 @@ C语言和算法
 * 库和框架
 
   JQuery、Bootstrap
+  
+* HTML5
 
 
 WEB后端(python系)
 ==================
-* python
-
-    python documention
-
-	virtualenv
-
-	可选：pypi、python cookbook、python 参考手册
-
-* django
-
-	django documention
-
-	django best practice / tow scoops of django
-
-	django book
-
-	可选： 1) 单元测试: Client 2) 功能测试：nose + unittest + request
-
-* 数据存储
-	
-	高性能mysql xtrabackup
-
-	redis 文档: <http://www.redisdoc.com/>  《redis设计与实现》 
-
-    MongoDB
-
-	memcached
-
-* 静态文件服务器
-	
-	nginx/varnish/squid
 
 * 动态文件服务器
 	
@@ -84,6 +100,46 @@ WEB后端(python系)
     apache
 
     日志分析工具: goaccess
+
+* 静态文件服务器
+	
+	nginx/varnish/squid
+
+* django
+
+	[django官方文档](https://www.djangoproject.com/)
+
+	[django best practice] / tow scoops of django
+
+   《django book》
+
+
+* 数据库和缓存
+
+    * mysql
+
+        《高性能mysql》 xtrabackup
+
+        《MySQL性能调优与架构设计》 
+
+    * redis 
+
+	    redis 文档: <http://www.redisdoc.com/>  
+
+        [《redis设计与实现》]<http://www.redisbook.com/>  
+
+        《Redis in Action》 
+
+    MongoDB
+
+	memcached
+
+
+* 测试
+
+    Django Client
+
+    nose + unittest + request
 
 
 * 搜索:
@@ -110,7 +166,7 @@ WEB后端(python系)
 
 	分布式文件系统
 
-* 书籍
+* web指导
 
 	__《HTTP权威指南》__  
 
@@ -138,7 +194,7 @@ WEB后端(python系)
 
 * 开发文档
 
-	Sphinx + reStructuredText + Nginx
+	Sphinx + reStructuredText + Graphviz + Nginx
 
 
 工作方法
@@ -162,13 +218,13 @@ Mindmap
 * 推测试上线脚本(with fabric)
 
 
-系统与运维
+运维
 ===============
 * 书本
 
-  __《构建高可用Linux服务器》__
+  《构建高可用Linux服务器》
 
-*  命令
+* Shell命令
     top/grep/netstat/lsof/ps/tcpdump/vmstat/iostat/strace
 
 * 工具
@@ -183,17 +239,17 @@ Mindmap
 
 	memcloud
 
-	可选：ganglia/zabbix
-
-
 工具
 ================
+
 * Evernote
 * github
 * vim
-* dropbox
+* dropbox & 百度云
 * tmux
 * Chrome
+* xmind
+* PhotoShop
 
 我的读书列表
 ================
