@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 慢查询分析
+title: MySQL 慢查询分析（1）
 ---
 
 

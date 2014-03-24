@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 数据库表优化
+title: MySQL 数据库表优化（3）
 ---
 
 待完善

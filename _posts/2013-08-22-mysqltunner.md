@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 数据库性能优化 —— 使用 MySQLTuner
+title: MySQL 数据库性能优化 —— 使用 MySQLTuner（4）
 ---
 
 [MySQLTunner] 是针对MySQL性能分析的一个perl脚本。它采集数据库的信息，生成分析报告，并给出一些优化建议。

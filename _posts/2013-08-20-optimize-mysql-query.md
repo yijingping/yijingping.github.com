@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL 查询语句分析和优化
+title: MySQL 查询语句分析和优化（2）
 ---
 
 通常我们使用mysql slow query log获取到慢查询语句后，需要对这些语句进行分析和优化;
