@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用django debug toolbar
+title: Django Debug Toolbar 的使用和改进
 ---
 
 #. 安装
