@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL慢查询分析
+title: MySQL 慢查询分析
 ---
 
 
@@ -83,16 +83,16 @@ LIKE查询，且使用了模糊匹配。之所以不会造成数据库出问题�
 
 * 代码中的查询语句不合理
 
-    解决方法：[分析和优化MySQL查询语句](/2013/08/21/optimize-mysql-query.html)
+    解决方法：[MySQL 查询语句分析和优化](/2013/08/20/optimize-mysql-query.html)
 
 * 数据库表设计不合理
 
-    解决方法：[优化MySQL数据库表](/2013/08/21/optimize-mysql-table.html)
+    解决方法：[MySQL 数据库表优化](/2013/08/21/optimize-mysql-table.html)
 
 * 数据库性能有问题
 
-    解决方法：[借助MySQLTuner优化MySQL](/2013/08/20/mysqltunner.html)
+    解决方法：[MySQL 数据库性能优化 —— 借助 MySQLTuner](/2013/08/22/mysqltunner.html)
 
 * 硬件问题
 
-    解决方法：[MySQL服务器监控和优化](./)
+    解决方法：[MySQL 监控和优化](./)
