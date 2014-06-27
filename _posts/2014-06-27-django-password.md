@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Django 源码学习（7）—— password的make和check 
+title: Django 源码学习（8）—— password的make和check 
 ---
 
 django 的password是加密存储的。 存储在数据库表auth_user中。
