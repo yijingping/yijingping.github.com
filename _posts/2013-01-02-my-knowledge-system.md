@@ -268,6 +268,8 @@ Mindmap
 
     Vagrant/Docker
 
+    Puppet/Chef/Salt
+
 * 监控与报警
 
 	Nagios
