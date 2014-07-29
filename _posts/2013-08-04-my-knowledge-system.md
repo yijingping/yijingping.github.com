@@ -3,23 +3,29 @@ layout: post
 title: 知识体系整理
 ---
 
-操作系统和网络
-====================
+操作系统
+========
 
 * 要求熟练使用Debian和CentOS
 
     《Unix高级环境编程》
 
-    《Unix网络编程卷1，套接字》和《Unix网络编程卷2，进程间通信》
-
     《Unix编程艺术》
 
-* 网络
+    同步/异步/协程
+
+
+网络
+====
 
     《TCP/IP详解 卷1：协议》
 
+    《用TCP\IP进行网际互联》 
+
+    《Unix网络编程卷1，套接字》和《Unix网络编程卷2，进程间通信》
+
 数据结构和算法
-=====================
+==============
 
 《算法:C语言实现(第1～4部分)基础知识、数据结构、排序及搜索(原书第3版)》
 
@@ -27,7 +33,7 @@ title: 知识体系整理
 
 
 语言
-=====================
+====
 
 熟练掌握：
 -----------
@@ -37,12 +43,16 @@ title: 知识体系整理
     [python官方文档](http://python.org/)
 
    《python 参考手册》
+   
+   《Python源码剖析》
 
 	virtualenv + virtualenvwraper
 
     supervisor/fabric/sentry
 
     ipython
+
+    django/tonardo/gevent
 
 * Java
 
@@ -61,6 +71,8 @@ title: 知识体系整理
 
 * Node.js
 
+* iOS开发
+
 继续加强:
 -----------
 
@@ -68,6 +80,9 @@ title: 知识体系整理
 
   《C程序设计语言（第2版·新版）》
 
+* C++语言
+
+  《Thinking in C++》
 
 前端
 ================
@@ -75,7 +90,7 @@ title: 知识体系整理
 
   __w3fools__
 
-  w3school: HTML、CSS、JAVASCRIPT、JSON
+  w3school: HTML、CSS、JAVASCRIPT、JSON、ProtoBuf、MessagePack
 
 * 技术
 
@@ -83,9 +98,13 @@ title: 知识体系整理
   
 * 库和框架
 
-  JQuery、Bootstrap
+  JQuery、Bootstrap2、Bootstrap3
   
 * HTML5
+
+* 数据可视化
+
+  d3.js
 
 
 WEB后端(python系)
@@ -113,6 +132,8 @@ WEB后端(python系)
 
    《django book》
 
+    django 源码
+
 
 * 数据库和缓存
 
@@ -130,10 +151,16 @@ WEB后端(python系)
 
         《Redis in Action》 
 
-    MongoDB
+    * MongoDB
 
-	memcached
+        《MongoDB权威指南》
 
+	* memcached(可以不用了)
+
+* 队列
+
+    * beanstalkd
+    * zeromq
 
 * 测试
 
@@ -141,6 +168,9 @@ WEB后端(python系)
 
     nose + unittest + request
 
+    ab
+    
+    LoadRunner
 
 * 搜索:
 
@@ -148,11 +178,19 @@ WEB后端(python系)
 
     elasticsearch
 
+* 大数据存储
+
+    BigTable/GFS/MapReduce
+
 * 大数据
 
     hadoop
 
     storm
+
+* 数据抓取
+
+    scrapy/Selenium/Phantomjs
 
 * 配套服务 
 
@@ -187,7 +225,7 @@ WEB后端(python系)
 
 
 文档
-===============
+====
 * 技术文档
 
 	Jekyll + Markdown
@@ -196,17 +234,11 @@ WEB后端(python系)
 
 	Sphinx + reStructuredText + Graphviz + Nginx
 
-
 工作方法
 ===============
 Get Things Done
 
 Mindmap
-
-
-数据抓取
-===============
-
 
 版本控制
 ===============
@@ -215,8 +247,11 @@ Mindmap
 
 * git-flow
 
-* 推测试上线脚本(with fabric)
+* gitlab/gitlab-ci/codereview
 
+* github/bitbucket
+
+* 推测试上线脚本(with fabric), 无缝重启
 
 运维
 ===============
@@ -229,7 +264,9 @@ Mindmap
 
 * 工具
 
-	supervisor
+	supervisor/svc
+
+    Vagrant/Docker
 
 * 监控与报警
 
@@ -240,7 +277,7 @@ Mindmap
 	memcloud
 
 工具
-================
+====
 
 * Evernote
 * github
