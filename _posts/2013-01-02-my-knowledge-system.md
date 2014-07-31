@@ -98,7 +98,7 @@ title: 知识体系整理
   
 * 库和框架
 
-  JQuery、Bootstrap2、Bootstrap3
+  JQuery、Angularjs、Bootstrap2、Bootstrap3
   
 * HTML5
 
@@ -142,6 +142,8 @@ WEB后端(python系)
         《高性能mysql》 xtrabackup
 
         《MySQL性能调优与架构设计》 
+
+        红黑树/B树/B+树/B*树
 
     * redis 
 
@@ -265,6 +267,8 @@ Mindmap
 * 工具
 
 	supervisor/svc
+
+    keepalive/heartbeat
 
     Vagrant/Docker
 
