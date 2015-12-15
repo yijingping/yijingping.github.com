@@ -3,6 +3,12 @@ layout: post
 title: 知识体系整理
 ---
 
+职业规划
+========
+方向：金融大数据（量化投资），突破口是该行业内的技术架构师
+目标：在40岁以前实现人生自由和财富自由
+能力：找准定位、组建团队、搞定融资的能力
+
 操作系统
 ========
 
@@ -71,7 +77,7 @@ title: 知识体系整理
 
 * Node.js
 
-* iOS开发
+* iOS开发（废弃）
 
 继续加强:
 -----------
@@ -83,6 +89,14 @@ title: 知识体系整理
 * C++语言
 
   《Thinking in C++》
+
+2015年尝试：
+-----------
+
+* Node.js
+
+* 前端
+
 
 前端
 ================
@@ -109,6 +123,11 @@ title: 知识体系整理
 
 WEB后端(python系)
 ==================
+* web框架
+
+    django
+
+    tornado
 
 * 动态文件服务器
 	
@@ -163,6 +182,7 @@ WEB后端(python系)
 
     * beanstalkd
     * zeromq
+    * kfaka
 
 * 测试
 
@@ -242,6 +262,10 @@ Get Things Done
 
 Mindmap
 
+团队协作（tower/worktile）
+
+
+
 版本控制
 ===============
 
@@ -249,7 +273,7 @@ Mindmap
 
 * git-flow
 
-* gitlab/gitlab-ci/codereview
+* gitlab/gitlab-ci/codereview/jenkins
 
 * github/bitbucket
 
@@ -287,7 +311,7 @@ Mindmap
 
 * Evernote
 * github
-* vim
+* vim/Webstorm/Pycharm
 * dropbox & 百度云
 * tmux
 * Chrome
