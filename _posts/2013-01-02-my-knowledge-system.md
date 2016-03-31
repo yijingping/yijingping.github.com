@@ -37,12 +37,18 @@ title: 知识体系整理
 
 《算法导论》
 
+软件工程
+========
+敏捷开发、版本控制、Code Review、持续集成、自动部署、Team Building、Scrum、DevOps、trello、GTD
 
-语言
-====
+《人月神话》、《黑客与画家》
+
+
+程序语言
+=======
 
 熟练掌握：
------------
+--------
 
 * Python
 
@@ -58,7 +64,21 @@ title: 知识体系整理
 
     ipython
 
-    django/tonardo/gevent
+    django/tonardo/flask
+    
+    gevent
+
+* 前端
+	
+	《JavaScript语言精粹》、《JavaScript权威指南》、《JavaScript高级程序设计》
+	
+	《css权威指南》、《精通CSS》
+	
+	《用AngularJS开发下一代Web应用》、《AngularJS权威教程》
+	
+	《响应式Web设计》、《响应式Web设计实践》、《HTML5触摸界面设计与开发》
+	
+	JQuery、Bootstrap、highcharts、d3.js
 
 * Java
 
@@ -67,17 +87,22 @@ title: 知识体系整理
     《JAVA 核心技术卷1: 基础知识》
 
     《JAVA 核心技术卷2: 高级特性》
+  
+  	 Spring Web 开发
 
-2014年尝试：
------------
-
+了解
+----
 * Go
     
   《Go Web 编程》
 
 * Node.js
 
+  《Node.js开发指南》、《深入浅出Node.js》、MEAN
+
 * iOS开发（废弃）
+
+* R
 
 继续加强:
 -----------
@@ -90,46 +115,14 @@ title: 知识体系整理
 
   《Thinking in C++》
 
-2015年尝试：
------------
-
-* Node.js
-
-* 前端
-
-
-前端
-================
-* 基础 
-
-  __w3fools__
-
-  w3school: HTML、CSS、JAVASCRIPT、JSON、ProtoBuf、MessagePack
-
-* 技术
-
-  AJAX
-  
-* 库和框架
-
-  JQuery、Angularjs、Bootstrap2、Bootstrap3
-  
-* HTML5
-
-* 数据可视化
-
-  d3.js
-
 
 WEB后端(python系)
 ==================
 * web框架
 
-    django
+    django、tornado、flask
 
-    tornado
-
-* 动态文件服务器
+* web容器
 	
 	nginx反向代理
 
@@ -178,11 +171,31 @@ WEB后端(python系)
 
 	* memcached(可以不用了)
 
-* 队列
+* 消息队列
 
     * beanstalkd
     * zeromq
-    * kfaka
+    * kafka
+
+* 搜索:
+
+	solr 
+
+    elasticsearch
+
+* 高可用
+
+	ZooKeeper
+	
+	Keepalived heartbeat haproxy lvs squid
+
+* 日志收集
+
+	Flume
+
+* SEO和统计
+
+	百度统计、Google统计、友盟统计
 
 * 测试
 
@@ -193,22 +206,14 @@ WEB后端(python系)
     ab
     
     LoadRunner
-
-* 搜索:
-
-	solr 
-
-    elasticsearch
-
+    
 * 大数据存储
 
     BigTable/GFS/MapReduce
 
 * 大数据
 
-    hadoop
-
-    storm
+    hadoop、storm、spark
 
 * 数据抓取
 
@@ -237,7 +242,7 @@ WEB后端(python系)
 	《REST in Pratice》
 
 
-* 工具 
+* 开发调试工具 
 
 	__Chrome DevTools__
 
@@ -245,19 +250,41 @@ WEB后端(python系)
 
     WireShark
 
+大数据
+========
+* 数据抓取
+
+* 大数据存储与处理
+
+	hadoop、storm、spark
+
+* 数据分析与挖掘
+	
+	《R in action》、python数据分析（NumPy、Pandas、matplotlib、scipy）
+
+* 数据可视化
+	
+	d3.js、ipython notebook
+
+* 统计知识
+
+机器学习
+=======
+
+
 
 文档
 ====
 * 技术文档
 
-	Jekyll + Markdown
+	Jekyll + Markdown = github.io
 
 * 开发文档
 
-	Sphinx + reStructuredText + Graphviz + Nginx
+	Sphinx + reStructuredText + Graphviz + Nginx = readthedocs.org
 
 工作方法
-===============
+=======
 Get Things Done
 
 Mindmap
@@ -265,9 +292,8 @@ Mindmap
 团队协作（tower/worktile）
 
 
-
 版本控制
-===============
+=======
 
 * git
 
@@ -280,7 +306,7 @@ Mindmap
 * 推测试上线脚本(with fabric), 无缝重启
 
 运维
-===============
+====
 * 书本
 
   《构建高可用Linux服务器》
@@ -317,6 +343,14 @@ Mindmap
 * Chrome
 * xmind
 * PhotoShop
+
+
+互联网其它
+=========
+* 投资创业
+* 产品
+* 设计
+* 运营 growth hacking
 
 我的读书列表
 ================
