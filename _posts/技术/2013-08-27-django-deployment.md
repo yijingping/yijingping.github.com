@@ -2,7 +2,7 @@
 layout: post
 title: 使用uWSGI部署Django
 category: 技术
-tags: Django 部署
+tags: Django
 ---
 
 原来公司部署Django采用的是Apache+mod_wsgi，后来为了降低服务器压力和增强并发能力，

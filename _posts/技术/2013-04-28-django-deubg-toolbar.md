@@ -2,7 +2,7 @@
 layout: post
 title: Django Debug Toolbar 的使用和改进
 category: 技术
-tags: Django 插件
+tags: Django
 ---
 
 #. 安装

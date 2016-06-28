@@ -2,7 +2,7 @@
 layout: post
 title: Daemontools使用
 category: 技术
-tags: 运维 部署
+tags: 运维
 ---
 
 linux主要使用supervise来管理常驻进程。基于supervise的两个比较重要的工具是[Daemontools]和[Supervisor]。

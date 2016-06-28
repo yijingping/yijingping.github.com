@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "使用 Markdown 和 Jekyll"
+title:  "为什么要使用 Markdown 和 Jekyll"
 date:   2015-01-05 19:18:07
 author: "易先生个蛋"
 category: 思考
@@ -8,9 +8,9 @@ tags: Jekyll
 ---
 
 # 为什么要使用 Markdown 和 Jekyll
-这里波纹科技发布技术文章和感悟的地方，文章的核心是内容，不是形式，我们不愿意花大量的时间在布局和排版上。
+这里我发布技术文章和感悟的地方，文章的核心是内容，不是形式，我不愿意花大量的时间在布局和排版上。
 
-在筛选了大部分文档编辑方案后，我们发现 Markdown **「易读易写」** 的哲学和我们的期望最相符。
+在筛选了大部分文档编辑方案后，我发现 Markdown **「易读易写」** 的哲学和我的期望最相符。
 
 Jekyll是一个静态站点生成器，可以根据Markdown文件自动生成静态的html文件。且github pages 支持托管jekyll。
 
@@ -23,7 +23,7 @@ Jekyll是一个静态站点生成器，可以根据Markdown文件自动生成静
 4. 免费，不限流量。
 5. 简单。你只要用自己喜欢的编辑器写文章就可以了，其他事情一概不用操心，都由github处理。
 
-下面一步一步来建立我们的博客
+下面一步一步来建立我的博客
 
 #1. 使用github pages
 
@@ -37,10 +37,10 @@ Jekyll是一个静态站点生成器，可以根据Markdown文件自动生成静
 
 更详细教程前往 [https://pages.github.com/] 。
 
-到这里我们已经学会了把静态文件托管在github上，下一步接着学习如何使用Jekyll托管动态文件。
+到这里我已经学会了把静态文件托管在github上，下一步接着学习如何使用Jekyll托管动态文件。
 
 #2. 使用Jekyll
-前面我们说过，Jekyll是一个静态站点生成器，可以根据Markdown文件自动生成静态的html文件。
+前面说过，Jekyll是一个静态站点生成器，可以根据Markdown文件自动生成静态的html文件。
 
 1. 安装Jekyll
 

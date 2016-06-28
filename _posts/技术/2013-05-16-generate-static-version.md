@@ -2,7 +2,7 @@
 layout: post
 title: 如何给web的静态文件生成版本号
 category: 技术
-tags: Django 前端
+tags: Django
 ---
 
 web页面中，静态文件：图片、css、js等会被浏览器缓存，如果我们更新了这些文件，浏览器却没有重新加载，就会出现错乱的情况。
