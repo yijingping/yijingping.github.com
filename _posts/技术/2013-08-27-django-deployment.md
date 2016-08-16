@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用uWSGI部署Django
+title: Nginx + svc + uWSGI + virtualenv 部署 Django 服务
 category: 技术
 tags: Django
 ---
