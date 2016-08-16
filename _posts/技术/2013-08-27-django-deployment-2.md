@@ -28,10 +28,20 @@ tags: Django
 
 包含了下面所有的用到的配置文件.
 
+# 配置uWsgi
 
-# uWsgi
+通过pip来安装
 
-其具体配置如下:
+    sudo pip install uwsgi
+
+执行下面的命令,测试uWsgi+Django是否能正常启动Web服务
+
+    # 启动web服务
+    uwsgi --http-socket 0.0.0.0:3031 --chdir /var/www/0fenbei/weibo-spider/ --wsgi-file weibospider/wsgi.py --master --processes 4 --threads 2 --stats 0.0.0.0:9191
+
+然后打开浏览器访问: http://你的服务器ip:3031, 看能否访问网站。 测试通过后,可以结束上面的进程。
+
+uWsgi的具体配置如下:
 
     [uwsgi]
     chdir=/var/www/0fenbei/weibo-spider
@@ -46,18 +56,19 @@ tags: Django
     max-requests=5000  # 请求5000次后重启
     # daemonize=/var/log/bowenpay/weibo-spider-uwsgi.log # 不使用daemon模式，防止supervisor自动重启
 
-可以通过命令来测试配置是否正常
-
-    # 启动web服务
-    uwsgi --http-socket 0.0.0.0:3031 --chdir /var/www/0fenbei/weibo-spider/ --wsgi-file weibospider/wsgi.py --master --processes 4 --threads 2 --stats 0.0.0.0:9191
-
-然后打开浏览器访问: http://你的服务器ip:3031, 看能否访问网站。 测试通过后,可以结束上面的进程。
-
 
 # 配置Supervisor
 `Supervisor`是用来将`uWsgi`做成一个守护进程的，通过`supervisor`命令或者网页服务也能启动和停止`uUwsgi`.
 
-安装和运行`Supervisor`请参考官方文档: [http://supervisord.org/](http://supervisord.org/) 。
+安装和运行`Supervisor`, 也可参考官方文档: [http://supervisord.org/](http://supervisord.org/) 。
+    
+    # 安装
+    sudo pip install supervisor
+    # 启动
+    sudo supervisord -c /etc/supervisord.conf
+    # 查看进程是否启动
+    ps aux|grep supervisor
+
 
 下面开始配置`Supervisor`。
 
