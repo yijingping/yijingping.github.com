@@ -7,7 +7,7 @@ tags: 抓包
 
 做web开发或者app开发的时候，经常会有抓包的需求。下面总结一下我用过的抓包工具，并分析一下优缺点。
 
-#. WireShark
+# WireShark
 
 Wireshark一直是用的最爽的一个工具，在max和windows下都有一致的界面。
 
@@ -20,7 +20,7 @@ Wireshark一直是用的最爽的一个工具，在max和windows下都有一致�
 
 最好用的抓包工具，支持https、proxy。但是是基于.Net 技术开发的，没办法直接在 Mac/Linux 下使用。
 
-#. Charles
+# Charles
 
 自带proxy，支持拦截并修改response，非常好用的一个工具，支持mac。
 
